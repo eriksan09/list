@@ -7,7 +7,7 @@
 #set -x
 cat <<EOF
 --------------------------------------------------------
-     PAYPAL VALIDATOR Private Gadjah Mada
+     PAYPAL VALIDATOR Private X-Mr.R4h1M
 --------------------------------------------------------
  
 EOF
@@ -168,7 +168,7 @@ malhadi_request() {
   # countryCode="$(echo "$posted" | grep 'merchantCountr' | grep -o -P '(?<=merchantCountry=).*(?=\")')"
   countryCode="$(echo "$posted" | grep -o -P '(?<=paypal.com).*(?=cgi-bin)' | tail -1 | awk -F[\/\/] '{print $2}' | tr '[:lower:]' '[:upper:]')"
   header="`date +%H:%M:%S` $inputFile -> $targetFolder"
-  footer="[root@audy] $(($duration % 60))sec.\n"
+  footer="[root@X-Mr.R4h1M] $(($duration % 60))sec.\n"
 
   if [[ $countryCode == '' ]]; then
     printf "[$header] $2/$3. ${RED}DIE => $1 ${NC} $footer"
@@ -247,4 +247,4 @@ fi
 #rm $inputFile
 duration=$SECONDS
 echo "Checking done in $(($duration / 3600)) hours $(($duration / 60 % 60)) minutes and $(($duration % 60)) seconds."
-echo "+==========+ Slackerc0de Family - v12ppval - By Malhadi Jr +==========+"
+echo "+==========+ Valid Paypal - v12ppval - By X-Mr.R4h1M +==========+"
